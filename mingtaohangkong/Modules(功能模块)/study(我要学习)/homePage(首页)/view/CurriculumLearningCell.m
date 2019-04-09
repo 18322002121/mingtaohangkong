@@ -14,7 +14,9 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         _showImages = [[UIImageView alloc]init];
+        _showImages.layer.cornerRadius = 10;
         _showImages.backgroundColor = kRandomColor;
         [self.contentView addSubview:_showImages];
     }
@@ -28,7 +30,7 @@
     [_showImages mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.mas_left).offset(38);
         make.right.mas_equalTo(self.mas_right).offset(-38);
-        make.top.mas_equalTo(self.mas_top).offset(12);
+        make.top.mas_equalTo(self.mas_top).offset(25);
         make.bottom.mas_equalTo(self.mas_bottom).offset(-12);
     }];
 }

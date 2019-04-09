@@ -6,5 +6,5 @@ target "mingtaohangkong" do
     pod 'FDFullscreenPopGesture', '1.1'
     pod 'JZNavigationExtension'
     pod 'CocoaLumberjack'
-    pod 'JXCategoryView'
+    pod 'YYModel'
 end

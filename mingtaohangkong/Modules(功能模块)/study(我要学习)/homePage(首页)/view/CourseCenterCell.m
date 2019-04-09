@@ -37,7 +37,7 @@
     [self.contentView addSubview:_bgView];
 
     _showImage = [[UIImageView alloc]init];
-    _showImage.backgroundColor = [UIColor redColor];
+    _showImage.backgroundColor = kRandomColor;
     _showImage.layer.cornerRadius = 10;
     [self.bgView addSubview:_showImage];
     
@@ -45,7 +45,7 @@
     [self.bgView addSubview:_titles];
 
     _iconNames = [[UIImageView alloc]init];
-    _iconNames.backgroundColor = [UIColor redColor];
+    _iconNames.backgroundColor = kRandomColor;
     [self.bgView addSubview:_iconNames];
     
     _names = [PublicLabel labelWithText:@"张妮妮" textColor:[UIColor colorWithHexString:@"#272727"] font:[UIFont systemFontOfSize:13] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];

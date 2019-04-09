@@ -12,7 +12,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor colorWithHexString:@"#F0F0F0"];
+        self.backgroundColor = kRandomColor;
     }
     return self;
 }

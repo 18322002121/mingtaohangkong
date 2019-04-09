@@ -32,6 +32,12 @@
 		21114EAB223274ED0026F1CC /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21114EAA223274ED0026F1CC /* InformationViewController.m */; };
 		21114EAE223275050026F1CC /* LiveBroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21114EAD223275050026F1CC /* LiveBroadcastViewController.m */; };
 		21114EB1223275120026F1CC /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21114EB0223275120026F1CC /* MineViewController.m */; };
+		2138905B225C4324007A5A5E /* CourseRecommendationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2138905A225C4324007A5A5E /* CourseRecommendationController.m */; };
+		21389061225C48DD007A5A5E /* CourseRecommendationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21389060225C48DD007A5A5E /* CourseRecommendationCell.m */; };
+		21389064225C5F17007A5A5E /* CourseChaptersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21389063225C5F17007A5A5E /* CourseChaptersController.m */; };
+		21389067225C644A007A5A5E /* CourseChaptersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21389066225C644A007A5A5E /* CourseChaptersCell.m */; };
+		2138906A225C6479007A5A5E /* CourseChaptersHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21389069225C6479007A5A5E /* CourseChaptersHeaderView.m */; };
+		2138906D225C80A4007A5A5E /* CourseChaptersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2138906C225C80A4007A5A5E /* CourseChaptersModel.m */; };
 		215F382222334EFD00A2A1C2 /* StudyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F382122334EFD00A2A1C2 /* StudyTabBarController.m */; };
 		215F382822335C7200A2A1C2 /* ClassificationSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F382722335C7200A2A1C2 /* ClassificationSelectionCell.m */; };
 		215F382B2233667700A2A1C2 /* ClassificationSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215F382A2233667700A2A1C2 /* ClassificationSelectionView.m */; };
@@ -128,6 +134,18 @@
 		21114EAD223275050026F1CC /* LiveBroadcastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastViewController.m; sourceTree = "<group>"; };
 		21114EAF223275120026F1CC /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		21114EB0223275120026F1CC /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		21389059225C4324007A5A5E /* CourseRecommendationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseRecommendationController.h; sourceTree = "<group>"; };
+		2138905A225C4324007A5A5E /* CourseRecommendationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseRecommendationController.m; sourceTree = "<group>"; };
+		2138905F225C48DD007A5A5E /* CourseRecommendationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseRecommendationCell.h; sourceTree = "<group>"; };
+		21389060225C48DD007A5A5E /* CourseRecommendationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseRecommendationCell.m; sourceTree = "<group>"; };
+		21389062225C5F17007A5A5E /* CourseChaptersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseChaptersController.h; sourceTree = "<group>"; };
+		21389063225C5F17007A5A5E /* CourseChaptersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseChaptersController.m; sourceTree = "<group>"; };
+		21389065225C644A007A5A5E /* CourseChaptersCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseChaptersCell.h; sourceTree = "<group>"; };
+		21389066225C644A007A5A5E /* CourseChaptersCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseChaptersCell.m; sourceTree = "<group>"; };
+		21389068225C6479007A5A5E /* CourseChaptersHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseChaptersHeaderView.h; sourceTree = "<group>"; };
+		21389069225C6479007A5A5E /* CourseChaptersHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseChaptersHeaderView.m; sourceTree = "<group>"; };
+		2138906B225C80A4007A5A5E /* CourseChaptersModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseChaptersModel.h; sourceTree = "<group>"; };
+		2138906C225C80A4007A5A5E /* CourseChaptersModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseChaptersModel.m; sourceTree = "<group>"; };
 		215F382022334EFD00A2A1C2 /* StudyTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyTabBarController.h; sourceTree = "<group>"; };
 		215F382122334EFD00A2A1C2 /* StudyTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyTabBarController.m; sourceTree = "<group>"; };
 		215F382622335C7200A2A1C2 /* ClassificationSelectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassificationSelectionCell.h; sourceTree = "<group>"; };
@@ -384,6 +402,51 @@
 			path = "login(登陆)";
 			sourceTree = "<group>";
 		};
+		21389058225C403E007A5A5E /* curriculumLearning(课程学习) */ = {
+			isa = PBXGroup;
+			children = (
+				2138905E225C484A007A5A5E /* controller */,
+				2138905D225C4844007A5A5E /* view */,
+				2138905C225C483D007A5A5E /* model */,
+			);
+			path = "curriculumLearning(课程学习)";
+			sourceTree = "<group>";
+		};
+		2138905C225C483D007A5A5E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2138906B225C80A4007A5A5E /* CourseChaptersModel.h */,
+				2138906C225C80A4007A5A5E /* CourseChaptersModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2138905D225C4844007A5A5E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				21389065225C644A007A5A5E /* CourseChaptersCell.h */,
+				21389066225C644A007A5A5E /* CourseChaptersCell.m */,
+				2138905F225C48DD007A5A5E /* CourseRecommendationCell.h */,
+				21389060225C48DD007A5A5E /* CourseRecommendationCell.m */,
+				21389068225C6479007A5A5E /* CourseChaptersHeaderView.h */,
+				21389069225C6479007A5A5E /* CourseChaptersHeaderView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2138905E225C484A007A5A5E /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				21657AD8224E02AA00591E9C /* CurriculumLearningController.h */,
+				21657AD9224E02AA00591E9C /* CurriculumLearningController.m */,
+				21389059225C4324007A5A5E /* CourseRecommendationController.h */,
+				2138905A225C4324007A5A5E /* CourseRecommendationController.m */,
+				21389062225C5F17007A5A5E /* CourseChaptersController.h */,
+				21389063225C5F17007A5A5E /* CourseChaptersController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		215F382522335C3600A2A1C2 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,10 +511,9 @@
 		21A8FF9C224CA88B009DCB62 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				21389058225C403E007A5A5E /* curriculumLearning(课程学习) */,
 				21114EA3223274B50026F1CC /* HomePageViewController.h */,
 				21114EA4223274B60026F1CC /* HomePageViewController.m */,
-				21657AD8224E02AA00591E9C /* CurriculumLearningController.h */,
-				21657AD9224E02AA00591E9C /* CurriculumLearningController.m */,
 				21657ADE224E0BF900591E9C /* AcademicRecordViewController.h */,
 				21657ADF224E0BF900591E9C /* AcademicRecordViewController.m */,
 				21657AE1224E0C0E00591E9C /* TestViewController.h */,
@@ -715,6 +777,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21389064225C5F17007A5A5E /* CourseChaptersController.m in Sources */,
 				21114E9C223243EB0026F1CC /* MessageLoginViewController.m in Sources */,
 				21657AE0224E0BF900591E9C /* AcademicRecordViewController.m in Sources */,
 				21114E9622323A830026F1CC /* PublicTextfield.m in Sources */,
@@ -724,6 +787,7 @@
 				215F382B2233667700A2A1C2 /* ClassificationSelectionView.m in Sources */,
 				215F382222334EFD00A2A1C2 /* StudyTabBarController.m in Sources */,
 				21114E9022321C270026F1CC /* BaseViewController.m in Sources */,
+				21389067225C644A007A5A5E /* CourseChaptersCell.m in Sources */,
 				21114E8322320A260026F1CC /* PublicLabel.m in Sources */,
 				21A8FFAC224CB23C009DCB62 /* MineView.m in Sources */,
 				21A8FF94224C894B009DCB62 /* BaseNavigationBar.m in Sources */,
@@ -734,6 +798,7 @@
 				21114E86223212420026F1CC /* PublicButton.m in Sources */,
 				21114E802231FF140026F1CC /* UIFont+runtime.m in Sources */,
 				21114EAB223274ED0026F1CC /* InformationViewController.m in Sources */,
+				2138905B225C4324007A5A5E /* CourseRecommendationController.m in Sources */,
 				21B5C4B12238A25B00159498 /* MBProgressHUD+Add.m in Sources */,
 				21114E99223243710026F1CC /* RegisterViewController.m in Sources */,
 				21657ADA224E02AA00591E9C /* CurriculumLearningController.m in Sources */,
@@ -746,7 +811,9 @@
 				21114EAE223275050026F1CC /* LiveBroadcastViewController.m in Sources */,
 				21114EB1223275120026F1CC /* MineViewController.m in Sources */,
 				2108B370223124550075559D /* RootViewController.m in Sources */,
+				2138906D225C80A4007A5A5E /* CourseChaptersModel.m in Sources */,
 				21657AE3224E0C0E00591E9C /* TestViewController.m in Sources */,
+				21389061225C48DD007A5A5E /* CourseRecommendationCell.m in Sources */,
 				21114E9322321C480026F1CC /* LoginViewController.m in Sources */,
 				21A8FFA9224CA982009DCB62 /* MineCell.m in Sources */,
 				2108B33E2231241E0075559D /* AppDelegate.m in Sources */,
@@ -754,6 +821,7 @@
 				21657AE6224E0C1D00591E9C /* SigninViewController.m in Sources */,
 				215F382822335C7200A2A1C2 /* ClassificationSelectionCell.m in Sources */,
 				21114E9F22324A370026F1CC /* BaseNavigationController.m in Sources */,
+				2138906A225C6479007A5A5E /* CourseChaptersHeaderView.m in Sources */,
 				21114EA8223274D80026F1CC /* CurriculumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

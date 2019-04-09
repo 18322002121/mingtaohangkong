@@ -10,9 +10,11 @@
 #import "MineCell.h"
 #import "MineView.h"
 #import "SettingViewController.h"
+#import "ModuleSelectionModel.h"
 
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)NSMutableArray *moduleSelectionArray;
 @end
 
 static NSString *const mineCell =@"MineCell";
@@ -20,7 +22,21 @@ static NSString *const mineCell =@"MineCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self moduleSelection];
     self.tableView.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)moduleSelection{
+    NSArray *dataArray = @[@{@"iconImage":@"study",@"gridTitle":@"学习记录"},
+                           @{@"iconImage":@"grade",@"gridTitle":@"签到记录"},
+                           @{@"iconImage":@"test",@"gridTitle":@"购买记录"},
+                           @{@"iconImage":@"checkin",@"gridTitle":@"检测更新"},
+                           @{@"iconImage":@"checkin",@"gridTitle":@"切换身份"}
+                           ];
+    self.moduleSelectionArray = [NSMutableArray arrayWithCapacity:0];
+    [dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.moduleSelectionArray  addObject:[ModuleSelectionModel initWithDict:obj]];
+    }];
 }
 
 - (UITableView *)tableView{
@@ -50,6 +66,7 @@ static NSString *const mineCell =@"MineCell";
 {
     UITableViewCell *normalCell = nil;
     MineCell *cell =[tableView dequeueReusableCellWithIdentifier:mineCell forIndexPath:indexPath];
+    [cell setSelectionModel:self.moduleSelectionArray[indexPath.row]];
     normalCell = cell;
     return normalCell;
 }

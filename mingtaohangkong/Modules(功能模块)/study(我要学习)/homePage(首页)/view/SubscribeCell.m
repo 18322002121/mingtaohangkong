@@ -38,7 +38,7 @@
         
         //头像
         _iconImages = [[UIImageView alloc]init];
-        _iconImages.backgroundColor = [UIColor redColor];
+        _iconImages.backgroundColor = kRandomColor;
         [_bgViews addSubview:_iconImages];
         
         //课程标题

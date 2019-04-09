@@ -9,15 +9,16 @@
 #import "HomePageViewController.h"
 #import "ClassificationSelectionCell.h"
 #import "ClassificationSelectionView.h"
-#import "CourseCenterCell.h"
-#import "SubscribeCell.h"
-#import "BaseNavigationBar.h"
-#import "NormalHeaderView.h"
-#import "ModuleSelectionModel.h"
 #import "CurriculumLearningController.h"
 #import "AcademicRecordViewController.h"
 #import "TestViewController.h"
 #import "SigninViewController.h"
+#import "BaseNavigationBar.h"
+#import "NormalHeaderView.h"
+#import "ModuleSelectionModel.h"
+#import "CourseCenterCell.h"
+#import "SubscribeCell.h"
+#import "InformationCell.h"
 
 @interface HomePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)UICollectionView *collectionView;
@@ -28,6 +29,7 @@ static NSString *const classificationSelectionCell = @"ClassificationSelectionCe
 static NSString *const courseCenterCell = @"CourseCenterCell";
 static NSString *const classificationSelectionView = @"ClassificationSelectionView";
 static NSString *const subscribeCell = @"SubscribeCell";
+static NSString *const informationCell = @"InformationCell";
 static NSString *const normalHeaderView = @"NormalHeaderView";
 @implementation HomePageViewController
 
@@ -68,6 +70,7 @@ static NSString *const normalHeaderView = @"NormalHeaderView";
         [_collectionView registerClass:[ClassificationSelectionCell class] forCellWithReuseIdentifier:classificationSelectionCell];
         [_collectionView registerClass:[SubscribeCell class] forCellWithReuseIdentifier:subscribeCell];
         [_collectionView registerClass:[CourseCenterCell class] forCellWithReuseIdentifier:courseCenterCell];
+        [_collectionView registerClass:[InformationCell class] forCellWithReuseIdentifier:informationCell];
         [_collectionView registerClass:[ClassificationSelectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:classificationSelectionView];
         [_collectionView registerClass:[NormalHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:normalHeaderView];
         [self.view addSubview:_collectionView];
@@ -108,7 +111,11 @@ static NSString *const normalHeaderView = @"NormalHeaderView";
     }else if (indexPath.section == 2){
         CourseCenterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:courseCenterCell forIndexPath:indexPath];
         goodsCell = cell;
+    }else if (indexPath.section == 3){
+        InformationCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:informationCell forIndexPath:indexPath];
+        goodsCell = cell;
     }
+    
     return goodsCell;
     
 }
@@ -122,6 +129,8 @@ static NSString *const normalHeaderView = @"NormalHeaderView";
         return CGSizeMake(KScreenWidth, 90);
     }else if (indexPath.section == 2){
        return CGSizeMake(KScreenWidth, 274);
+    }else if (indexPath.section == 3){
+        return CGSizeMake(KScreenWidth, 100);
     }else{
         return CGSizeZero;
     }
