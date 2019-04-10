@@ -7,4 +7,5 @@ target "mingtaohangkong" do
     pod 'JZNavigationExtension'
     pod 'CocoaLumberjack'
     pod 'YYModel'
+    pod "PLPlayerKit", :podspec => 'https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec'
 end

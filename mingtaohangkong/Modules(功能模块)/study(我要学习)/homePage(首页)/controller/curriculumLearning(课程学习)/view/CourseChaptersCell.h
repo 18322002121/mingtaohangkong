@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Students;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CourseChaptersCell : UITableViewCell
-
+@property (nonatomic,strong) Students *studentsModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -58,6 +58,8 @@
 		21A8FFAF224CE5FF009DCB62 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8FFAE224CE5FF009DCB62 /* SettingViewController.m */; };
 		21B5C4B12238A25B00159498 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B5C4B02238A25B00159498 /* MBProgressHUD+Add.m */; };
 		21C3771322364C7F00CFAB8F /* JobWantedTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3771222364C7F00CFAB8F /* JobWantedTabBarController.m */; };
+		21EE8122225DB72100998889 /* VideoPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8121225DB72100998889 /* VideoPlaybackController.m */; };
+		21EE8125225DBCF800998889 /* VideoPlaybackHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8124225DBCF800998889 /* VideoPlaybackHeaderView.m */; };
 		6E6526D7C4861D85322A4F46 /* libPods-mingtaohangkong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F528897F203DEA86ED0D0DAD /* libPods-mingtaohangkong.a */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +187,10 @@
 		21B5C4B02238A25B00159498 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		21C3771122364C7F00CFAB8F /* JobWantedTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobWantedTabBarController.h; sourceTree = "<group>"; };
 		21C3771222364C7F00CFAB8F /* JobWantedTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobWantedTabBarController.m; sourceTree = "<group>"; };
+		21EE8120225DB72100998889 /* VideoPlaybackController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackController.h; sourceTree = "<group>"; };
+		21EE8121225DB72100998889 /* VideoPlaybackController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlaybackController.m; sourceTree = "<group>"; };
+		21EE8123225DBCF800998889 /* VideoPlaybackHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackHeaderView.h; sourceTree = "<group>"; };
+		21EE8124225DBCF800998889 /* VideoPlaybackHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlaybackHeaderView.m; sourceTree = "<group>"; };
 		A835E772E26B2681D0D07D5A /* Pods-mingtaohangkong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaohangkong.release.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaohangkong/Pods-mingtaohangkong.release.xcconfig"; sourceTree = "<group>"; };
 		F528897F203DEA86ED0D0DAD /* libPods-mingtaohangkong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mingtaohangkong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -430,6 +436,8 @@
 				21389060225C48DD007A5A5E /* CourseRecommendationCell.m */,
 				21389068225C6479007A5A5E /* CourseChaptersHeaderView.h */,
 				21389069225C6479007A5A5E /* CourseChaptersHeaderView.m */,
+				21EE8123225DBCF800998889 /* VideoPlaybackHeaderView.h */,
+				21EE8124225DBCF800998889 /* VideoPlaybackHeaderView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -443,6 +451,8 @@
 				2138905A225C4324007A5A5E /* CourseRecommendationController.m */,
 				21389062225C5F17007A5A5E /* CourseChaptersController.h */,
 				21389063225C5F17007A5A5E /* CourseChaptersController.m */,
+				21EE8120225DB72100998889 /* VideoPlaybackController.h */,
+				21EE8121225DB72100998889 /* VideoPlaybackController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -636,6 +646,7 @@
 				2108B3352231241E0075559D /* Sources */,
 				2108B3362231241E0075559D /* Frameworks */,
 				2108B3372231241E0075559D /* Resources */,
+				65F2B7F25BBF9FFAFF0280F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -752,6 +763,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		65F2B7F25BBF9FFAFF0280F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mingtaohangkong/Pods-mingtaohangkong-frameworks.sh",
+				"${PODS_ROOT}/PLPlayerKit/Pod/Library-Universal/PLPlayerKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mingtaohangkong/Pods-mingtaohangkong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CAC3C895B9730E91DEC34124 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -783,6 +812,7 @@
 				21114E9622323A830026F1CC /* PublicTextfield.m in Sources */,
 				21114EA22232606C0026F1CC /* ForgetPasswordViewController.m in Sources */,
 				210B7266223128E2003F572E /* HCYRequestManager.m in Sources */,
+				21EE8125225DBCF800998889 /* VideoPlaybackHeaderView.m in Sources */,
 				21114EA5223274B60026F1CC /* HomePageViewController.m in Sources */,
 				215F382B2233667700A2A1C2 /* ClassificationSelectionView.m in Sources */,
 				215F382222334EFD00A2A1C2 /* StudyTabBarController.m in Sources */,
@@ -810,6 +840,7 @@
 				21C3771322364C7F00CFAB8F /* JobWantedTabBarController.m in Sources */,
 				21114EAE223275050026F1CC /* LiveBroadcastViewController.m in Sources */,
 				21114EB1223275120026F1CC /* MineViewController.m in Sources */,
+				21EE8122225DB72100998889 /* VideoPlaybackController.m in Sources */,
 				2108B370223124550075559D /* RootViewController.m in Sources */,
 				2138906D225C80A4007A5A5E /* CourseChaptersModel.m in Sources */,
 				21657AE3224E0C0E00591E9C /* TestViewController.m in Sources */,

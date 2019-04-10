@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CourseChaptersHeaderView : UITableViewHeaderFooterView
-
+@property (nonatomic,strong) void(^OpenAndCloseButton)(UIButton *sender);
 @end
 
 NS_ASSUME_NONNULL_END

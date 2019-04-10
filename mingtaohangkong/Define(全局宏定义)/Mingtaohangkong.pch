@@ -12,8 +12,8 @@
 #import <Masonry.h>
 #import <JZNavigationExtension.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import <JXCategoryView.h>
 #import <MBProgressHUD.h>
+#import <YYModel.h>
 #import "HCYRequestHandler.h"
 #import "HCYRequestManager.h"
 #import "HCYRequestUrl.h"

@@ -10,6 +10,7 @@
 @interface CourseChaptersHeaderView ()
 @property (nonatomic,strong) PublicLabel *titles;
 @property (nonatomic,strong) UIImageView *rightIcon;
+@property (nonatomic,strong) PublicButton *openAndClose;
 @end
 @implementation CourseChaptersHeaderView
 
@@ -22,6 +23,9 @@
         _rightIcon = [[UIImageView alloc]init];
         _rightIcon.image = [UIImage imageNamed:@"unexpanded"];
         [self.contentView addSubview:_rightIcon];
+        
+        _openAndClose = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"" titleColor:[UIColor blackColor] textFont:[UIFont systemFontOfSize:13] backgroundColor:[UIColor clearColor] addView:self target:self action:@selector(openAndCloseClick:)];
+        
     }
     return self;
 }
@@ -38,6 +42,18 @@
         make.centerY.mas_equalTo(self.contentView.mas_centerY).offset(0);
         make.size.mas_equalTo(CGSizeMake(7, 12));
     }];
+    
+    [_openAndClose mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.mas_top).offset(0);
+        make.left.mas_equalTo(self.mas_left).offset(0);
+        make.right.mas_equalTo(self.mas_right).offset(0);
+        make.bottom.mas_equalTo(self.mas_bottom).offset(0);
+    }];
 }
+
+- (void)openAndCloseClick:(UIButton *)sender{
+    !_OpenAndCloseButton ? : _OpenAndCloseButton(sender);
+}
+
 
 @end

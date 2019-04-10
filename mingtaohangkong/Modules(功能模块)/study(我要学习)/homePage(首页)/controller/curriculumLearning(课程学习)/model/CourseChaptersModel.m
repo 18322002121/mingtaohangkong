@@ -8,6 +8,11 @@
 
 #import "CourseChaptersModel.h"
 
-@implementation CourseChaptersModel
+@implementation Students
 
+@end
+@implementation CourseChaptersModel
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"students" : [Students class]};
+}
 @end

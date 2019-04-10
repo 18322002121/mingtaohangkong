@@ -7,17 +7,27 @@
 //
 
 #import "CourseChaptersController.h"
+#import "VideoPlaybackController.h"
 #import "CourseChaptersCell.h"
 #import "CourseChaptersHeaderView.h"
 #import "CourseChaptersModel.h"
 
 @interface CourseChaptersController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
-
+@property (nonatomic,strong)NSMutableArray *dataArray;
 @end
 
 static NSString *const courseChaptersCell = @"CourseChaptersCell";
 @implementation CourseChaptersController
+
+- (NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _dataArray;
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,23 +39,23 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
 - (void)createDatas{
     NSArray *datas = @[
                        @{
-                           @"className": @"1601班",
+                           @"className": @"一、 礼仪意识的养成",
                            @"students" :
                                @[
                                    @{
-                                       @"name":@"博爱01",
+                                       @"name":@"01.  中国礼仪的起源与发展",
                                        @"age":@(18),
                                        },
                                    @{
-                                       @"name":@"博爱02",
+                                       @"name":@"02.  礼仪的概念与内涵 ",
                                        @"age":@(19),
                                        },
                                    @{
-                                       @"name":@"博爱03",
+                                       @"name":@"03.  航空服务礼仪 ",
                                        @"age":@(15),
                                        },
                                    @{
-                                       @"name":@"博爱04",
+                                       @"name":@"04.  学习航空服务礼仪的重要性",
                                        @"age":@(22),
                                        },
                                    @{
@@ -107,26 +117,12 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
                                    ]
                            }
                        ];
-//    BA_WEAKSELF;
-//    [datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//
-//        DemoVC2_02_classModel *model = [[DemoVC2_02_classModel alloc] initWithDictionary:obj];
-//        model.expend = NO;
-//
-//        [weakSelf.classModels addObject:model];
-//    }];
-    NSLog(@"%@",datas);
+
     [datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        CourseChaptersModel *models = [CourseChaptersModel ]
+        CourseChaptersModel *models = [CourseChaptersModel yy_modelWithDictionary:obj];
+        [self.dataArray addObject:models];
     }];
 }
-
-
-
-
-
-
-
 
 - (UITableView *)tableView{
     if (!_tableView) {
@@ -145,18 +141,22 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    CourseChaptersModel *model = _dataArray[section];
+    return model.students.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *normalCell = nil;
     CourseChaptersCell *cell =[tableView dequeueReusableCellWithIdentifier:courseChaptersCell forIndexPath:indexPath];
+    CourseChaptersModel *sectionModel = _dataArray[indexPath.section];
+    Students *rowModel = sectionModel.students[indexPath.row];
+    [cell setStudentsModel:rowModel];
     normalCell = cell;
     return normalCell;
 }
@@ -174,11 +174,15 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     CourseChaptersHeaderView *headerView = [[CourseChaptersHeaderView alloc]init];
+    headerView.OpenAndCloseButton = ^(UIButton * _Nonnull sender) {
+        NSLog(@"%ld section头部被点击了",(long)section);
+    };
     return headerView;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    VideoPlaybackController *videoPlayback = [[VideoPlaybackController alloc]init];
+    [self.navigationController pushViewController:videoPlayback animated:YES];
 }
 
 

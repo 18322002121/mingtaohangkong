@@ -7,6 +7,7 @@
 //
 
 #import "CourseChaptersCell.h"
+#import "CourseChaptersModel.h"
 @interface CourseChaptersCell ()
 @property (nonatomic,strong) PublicLabel *titles;
 @end
@@ -28,5 +29,16 @@
         make.left.mas_equalTo(self.contentView.mas_left).offset(37);
     }];
 }
+
+//- (void)setCourseChaptersModel:(CourseChaptersModel *)courseChaptersModel{
+//    _courseChaptersModel = courseChaptersModel;
+//    _titles.text = courseChaptersModel.className;
+//
+//}
+- (void)setStudentsModel:(Students *)studentsModel{
+    _studentsModel = studentsModel;
+    _titles.text = studentsModel.name;
+}
+
 
 @end
