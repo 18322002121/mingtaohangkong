@@ -9,13 +9,18 @@
 #import "VideoPlaybackController.h"
 #import "CourseChaptersCell.h"
 #import "VideoPlaybackHeaderView.h"
+#import "CourseRecommendationCell.h"
+#import "VideoPlaybackDetailHeaderView.h"
 
 @interface VideoPlaybackController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @end
 
 static NSString *const courseChaptersCell = @"CourseChaptersCell";
+static NSString *const courseRecommendationCell = @"CourseRecommendationCell";
 static NSString *const videoPlaybackHeaderView = @"VideoPlaybackHeaderView";
+static NSString *const videoPlaybackDetailHeaderView = @"VideoPlaybackDetailHeaderView";
+
 @implementation VideoPlaybackController
 
 - (void)viewDidLoad {
@@ -33,7 +38,9 @@ static NSString *const videoPlaybackHeaderView = @"VideoPlaybackHeaderView";
         self.tableView.showsHorizontalScrollIndicator = NO;
         self.tableView.showsVerticalScrollIndicator = NO;
         [self.tableView registerClass:[CourseChaptersCell class] forCellReuseIdentifier:courseChaptersCell];
+        [self.tableView registerClass:[CourseRecommendationCell class] forCellReuseIdentifier:courseRecommendationCell];
         [self.tableView registerClass:[VideoPlaybackHeaderView class] forHeaderFooterViewReuseIdentifier:videoPlaybackHeaderView];
+        [self.tableView registerClass:[VideoPlaybackDetailHeaderView class] forHeaderFooterViewReuseIdentifier:videoPlaybackDetailHeaderView];
         [self.view addSubview:self.tableView];
     }
     return _tableView;
@@ -52,32 +59,49 @@ static NSString *const videoPlaybackHeaderView = @"VideoPlaybackHeaderView";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *normalCell = nil;
-    CourseChaptersCell *cell =[tableView dequeueReusableCellWithIdentifier:courseChaptersCell forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        CourseChaptersCell *cell =[tableView dequeueReusableCellWithIdentifier:courseChaptersCell forIndexPath:indexPath];
+        normalCell = cell;
+    }else{
+        CourseRecommendationCell *cell =[tableView dequeueReusableCellWithIdentifier:courseRecommendationCell forIndexPath:indexPath];
+        normalCell = cell;
+    }
+    
+    
 //    CourseChaptersModel *sectionModel = _dataArray[indexPath.section];
 //    Students *rowModel = sectionModel.students[indexPath.row];
 //    [cell setStudentsModel:rowModel];
-    normalCell = cell;
     return normalCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 45;
+    if (indexPath.section == 0) {
+        return 45;
+    }else{
+        return 132;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 210;
+        return 275;
     }else{
-        return 0;
+        return 40;
     }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    VideoPlaybackHeaderView *videoPlayView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:videoPlaybackHeaderView];
-    return videoPlayView;
+    if (section == 0) {
+        VideoPlaybackHeaderView *videoPlayView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:videoPlaybackHeaderView];
+        return videoPlayView;
+    }else{
+        VideoPlaybackDetailHeaderView *videoPlayView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:videoPlaybackDetailHeaderView];
+        return videoPlayView;
+    }
+    
 }
 
 

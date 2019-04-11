@@ -14,6 +14,7 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <MBProgressHUD.h>
 #import <YYModel.h>
+#import <PLPlayerKit/PLPlayerKit.h>
 #import "HCYRequestHandler.h"
 #import "HCYRequestManager.h"
 #import "HCYRequestUrl.h"

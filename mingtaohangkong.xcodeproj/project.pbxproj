@@ -49,6 +49,7 @@
 		21657AE6224E0C1D00591E9C /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21657AE5224E0C1D00591E9C /* SigninViewController.m */; };
 		21657AE9224E186400591E9C /* InformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21657AE8224E186400591E9C /* InformationCell.m */; };
 		2192669F224DC209000B5E41 /* ModuleSelectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2192669E224DC209000B5E41 /* ModuleSelectionModel.m */; };
+		219DC8E6225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219DC8E5225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.m */; };
 		21A8FF8F224C6442009DCB62 /* SubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8FF8E224C6442009DCB62 /* SubscribeCell.m */; };
 		21A8FF91224C75AE009DCB62 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A8FF90224C75AE009DCB62 /* Home.xcassets */; };
 		21A8FF94224C894B009DCB62 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8FF93224C894B009DCB62 /* BaseNavigationBar.m */; };
@@ -170,6 +171,8 @@
 		21657AE8224E186400591E9C /* InformationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationCell.m; sourceTree = "<group>"; };
 		2192669D224DC209000B5E41 /* ModuleSelectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleSelectionModel.h; sourceTree = "<group>"; };
 		2192669E224DC209000B5E41 /* ModuleSelectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleSelectionModel.m; sourceTree = "<group>"; };
+		219DC8E4225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackDetailHeaderView.h; sourceTree = "<group>"; };
+		219DC8E5225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlaybackDetailHeaderView.m; sourceTree = "<group>"; };
 		21A8FF8D224C6442009DCB62 /* SubscribeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubscribeCell.h; sourceTree = "<group>"; };
 		21A8FF8E224C6442009DCB62 /* SubscribeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubscribeCell.m; sourceTree = "<group>"; };
 		21A8FF90224C75AE009DCB62 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 				21389069225C6479007A5A5E /* CourseChaptersHeaderView.m */,
 				21EE8123225DBCF800998889 /* VideoPlaybackHeaderView.h */,
 				21EE8124225DBCF800998889 /* VideoPlaybackHeaderView.m */,
+				219DC8E4225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.h */,
+				219DC8E5225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -820,6 +825,7 @@
 				21389067225C644A007A5A5E /* CourseChaptersCell.m in Sources */,
 				21114E8322320A260026F1CC /* PublicLabel.m in Sources */,
 				21A8FFAC224CB23C009DCB62 /* MineView.m in Sources */,
+				219DC8E6225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.m in Sources */,
 				21A8FF94224C894B009DCB62 /* BaseNavigationBar.m in Sources */,
 				2108B34C2231241F0075559D /* main.m in Sources */,
 				210B7265223128E2003F572E /* HCYRequestHandler.m in Sources */,

@@ -104,14 +104,22 @@ static NSString *const mineCell =@"MineCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [self setStatusBarBackgroundColor:[UIColor colorWithRed:0.67 green:0.14 blue:0.23 alpha:1.00]];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
+    [self setStatusBarBackgroundColor:[UIColor clearColor]];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
+//设置状态栏颜色
+- (void)setStatusBarBackgroundColor:(UIColor *)color {
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = color;
+    }
 }
 
 @end

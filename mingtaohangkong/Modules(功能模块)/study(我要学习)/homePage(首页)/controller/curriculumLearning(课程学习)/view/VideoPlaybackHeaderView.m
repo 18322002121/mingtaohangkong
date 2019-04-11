@@ -8,15 +8,16 @@
 
 #import "VideoPlaybackHeaderView.h"
 @interface VideoPlaybackHeaderView ()
-@property(nonatomic,strong)UIView *view;
+@property (nonatomic,strong)UIView *view;
 @end
+
 @implementation VideoPlaybackHeaderView
 
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
         _view = [[UIView alloc]init];
-        _view.backgroundColor = [UIColor redColor];
+        _view.backgroundColor = kRandomColor;
         [self addSubview:_view];
     }
     return self;
