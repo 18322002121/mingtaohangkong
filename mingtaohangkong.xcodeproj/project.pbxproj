@@ -48,6 +48,7 @@
 		21657AE3224E0C0E00591E9C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21657AE2224E0C0E00591E9C /* TestViewController.m */; };
 		21657AE6224E0C1D00591E9C /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21657AE5224E0C1D00591E9C /* SigninViewController.m */; };
 		21657AE9224E186400591E9C /* InformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21657AE8224E186400591E9C /* InformationCell.m */; };
+		216DAF8F225F13F90008C8D2 /* PublicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 216DAF8E225F13F90008C8D2 /* PublicTableView.m */; };
 		2192669F224DC209000B5E41 /* ModuleSelectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2192669E224DC209000B5E41 /* ModuleSelectionModel.m */; };
 		219DC8E6225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219DC8E5225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.m */; };
 		21A8FF8F224C6442009DCB62 /* SubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8FF8E224C6442009DCB62 /* SubscribeCell.m */; };
@@ -169,6 +170,8 @@
 		21657AE5224E0C1D00591E9C /* SigninViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 		21657AE7224E186400591E9C /* InformationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationCell.h; sourceTree = "<group>"; };
 		21657AE8224E186400591E9C /* InformationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationCell.m; sourceTree = "<group>"; };
+		216DAF8D225F13F90008C8D2 /* PublicTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicTableView.h; sourceTree = "<group>"; };
+		216DAF8E225F13F90008C8D2 /* PublicTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicTableView.m; sourceTree = "<group>"; };
 		2192669D224DC209000B5E41 /* ModuleSelectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleSelectionModel.h; sourceTree = "<group>"; };
 		2192669E224DC209000B5E41 /* ModuleSelectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleSelectionModel.m; sourceTree = "<group>"; };
 		219DC8E4225DCC6E00C1691C /* VideoPlaybackDetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackDetailHeaderView.h; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 				21114E85223212420026F1CC /* PublicButton.m */,
 				21114E87223217170026F1CC /* UIColor+Hex.h */,
 				21114E88223217170026F1CC /* UIColor+Hex.m */,
+				216DAF8D225F13F90008C8D2 /* PublicTableView.h */,
+				216DAF8E225F13F90008C8D2 /* PublicTableView.m */,
 			);
 			path = "Utils(工具类)";
 			sourceTree = "<group>";
@@ -843,6 +848,7 @@
 				21A8FFAF224CE5FF009DCB62 /* SettingViewController.m in Sources */,
 				215F382E2233699000A2A1C2 /* CourseCenterCell.m in Sources */,
 				21657AE9224E186400591E9C /* InformationCell.m in Sources */,
+				216DAF8F225F13F90008C8D2 /* PublicTableView.m in Sources */,
 				21C3771322364C7F00CFAB8F /* JobWantedTabBarController.m in Sources */,
 				21114EAE223275050026F1CC /* LiveBroadcastViewController.m in Sources */,
 				21114EB1223275120026F1CC /* MineViewController.m in Sources */,
