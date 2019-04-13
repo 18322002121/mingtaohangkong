@@ -19,6 +19,7 @@
         self.estimatedRowHeight = 200;
         self.rowHeight = UITableViewAutomaticDimension;
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.showsVerticalScrollIndicator = NO;
     }
     return self;
 }

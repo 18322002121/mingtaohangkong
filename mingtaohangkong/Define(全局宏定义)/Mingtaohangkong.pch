@@ -23,6 +23,7 @@
 #import "UIColor+Hex.h"
 #import "PublicLabel.h"
 #import "PublicButton.h"
+#import "PublicTableView.h"
 #import "PublicTextfield.h"
 #import "PublicRefreshFooter.h"
 #import "PublicRefreshHeader.h"
