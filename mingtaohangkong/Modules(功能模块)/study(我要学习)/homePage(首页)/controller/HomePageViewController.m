@@ -37,6 +37,7 @@ static NSString *const normalHeaderView = @"NormalHeaderView";
     [super viewDidLoad];
     [self loadingViews];
     [self moduleSelection];
+
 }
 
 #pragma mark - 请求数据
@@ -63,7 +64,7 @@ static NSString *const normalHeaderView = @"NormalHeaderView";
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout =[[UICollectionViewFlowLayout alloc]init];
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, kNavAndStatusHight, KScreenWidth, KScreenHeight-kNavAndStatusHight-kTabBarHeight) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, kNavAndStatusHight, KScreenWidth, KScreenHeight - kNavBarHeight - kTabBarHeight - kStatusBarHeight) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.showsVerticalScrollIndicator = NO;

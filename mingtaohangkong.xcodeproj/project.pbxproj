@@ -61,6 +61,10 @@
 		21B5C4B12238A25B00159498 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B5C4B02238A25B00159498 /* MBProgressHUD+Add.m */; };
 		21C3771322364C7F00CFAB8F /* JobWantedTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3771222364C7F00CFAB8F /* JobWantedTabBarController.m */; };
 		21CFAA642261B1EB008F5E60 /* UIImage+cornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CFAA632261B1EB008F5E60 /* UIImage+cornerRadius.m */; };
+		21CFAA6A2261BE6D008F5E60 /* PublicRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CFAA692261BE6D008F5E60 /* PublicRefreshFooter.m */; };
+		21CFAA6E2261BEE7008F5E60 /* PublicRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CFAA6D2261BEE7008F5E60 /* PublicRefreshHeader.m */; };
+		21CFAA712261BF22008F5E60 /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CFAA702261BF22008F5E60 /* UIView+Animations.m */; };
+		21CFAA732261C125008F5E60 /* Refresh.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CFAA722261C125008F5E60 /* Refresh.xcassets */; };
 		21EE8122225DB72100998889 /* VideoPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8121225DB72100998889 /* VideoPlaybackController.m */; };
 		21EE8125225DBCF800998889 /* VideoPlaybackHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8124225DBCF800998889 /* VideoPlaybackHeaderView.m */; };
 		6E6526D7C4861D85322A4F46 /* libPods-mingtaohangkong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F528897F203DEA86ED0D0DAD /* libPods-mingtaohangkong.a */; };
@@ -196,6 +200,13 @@
 		21C3771222364C7F00CFAB8F /* JobWantedTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobWantedTabBarController.m; sourceTree = "<group>"; };
 		21CFAA622261B1EB008F5E60 /* UIImage+cornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+cornerRadius.h"; sourceTree = "<group>"; };
 		21CFAA632261B1EB008F5E60 /* UIImage+cornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+cornerRadius.m"; sourceTree = "<group>"; };
+		21CFAA682261BE6D008F5E60 /* PublicRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicRefreshFooter.h; sourceTree = "<group>"; };
+		21CFAA692261BE6D008F5E60 /* PublicRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicRefreshFooter.m; sourceTree = "<group>"; };
+		21CFAA6C2261BEE7008F5E60 /* PublicRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicRefreshHeader.h; sourceTree = "<group>"; };
+		21CFAA6D2261BEE7008F5E60 /* PublicRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicRefreshHeader.m; sourceTree = "<group>"; };
+		21CFAA6F2261BF22008F5E60 /* UIView+Animations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
+		21CFAA702261BF22008F5E60 /* UIView+Animations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
+		21CFAA722261C125008F5E60 /* Refresh.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Refresh.xcassets; sourceTree = "<group>"; };
 		21EE8120225DB72100998889 /* VideoPlaybackController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackController.h; sourceTree = "<group>"; };
 		21EE8121225DB72100998889 /* VideoPlaybackController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlaybackController.m; sourceTree = "<group>"; };
 		21EE8123225DBCF800998889 /* VideoPlaybackHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackHeaderView.h; sourceTree = "<group>"; };
@@ -319,6 +330,7 @@
 		210B725C2231287C003F572E /* Utils(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				21CFAA6B2261BE94008F5E60 /* 刷新控件 */,
 				21B5C4AF2238A25B00159498 /* MBProgressHUD+Add.h */,
 				21B5C4B02238A25B00159498 /* MBProgressHUD+Add.m */,
 				21114E9422323A820026F1CC /* PublicTextfield.h */,
@@ -633,6 +645,20 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		21CFAA6B2261BE94008F5E60 /* 刷新控件 */ = {
+			isa = PBXGroup;
+			children = (
+				21CFAA682261BE6D008F5E60 /* PublicRefreshFooter.h */,
+				21CFAA692261BE6D008F5E60 /* PublicRefreshFooter.m */,
+				21CFAA6C2261BEE7008F5E60 /* PublicRefreshHeader.h */,
+				21CFAA6D2261BEE7008F5E60 /* PublicRefreshHeader.m */,
+				21CFAA6F2261BF22008F5E60 /* UIView+Animations.h */,
+				21CFAA702261BF22008F5E60 /* UIView+Animations.m */,
+				21CFAA722261C125008F5E60 /* Refresh.xcassets */,
+			);
+			path = "刷新控件";
+			sourceTree = "<group>";
+		};
 		C112C4D1400769431DAF84CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,7 +687,7 @@
 				2108B3352231241E0075559D /* Sources */,
 				2108B3362231241E0075559D /* Frameworks */,
 				2108B3372231241E0075559D /* Resources */,
-				65F2B7F25BBF9FFAFF0280F2 /* [CP] Embed Pods Frameworks */,
+				202B46C1279D7435F6F61C88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -758,6 +784,7 @@
 				2108B3492231241F0075559D /* LaunchScreen.storyboard in Resources */,
 				2108B3462231241F0075559D /* Assets.xcassets in Resources */,
 				21A8FF91224C75AE009DCB62 /* Home.xcassets in Resources */,
+				21CFAA732261C125008F5E60 /* Refresh.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,22 +805,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		65F2B7F25BBF9FFAFF0280F2 /* [CP] Embed Pods Frameworks */ = {
+		202B46C1279D7435F6F61C88 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mingtaohangkong/Pods-mingtaohangkong-frameworks.sh",
-				"${PODS_ROOT}/PLPlayerKit/Pod/Library-Universal/PLPlayerKit.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-mingtaohangkong/Pods-mingtaohangkong-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mingtaohangkong/Pods-mingtaohangkong-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mingtaohangkong/Pods-mingtaohangkong-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CAC3C895B9730E91DEC34124 /* [CP] Check Pods Manifest.lock */ = {
@@ -847,9 +874,12 @@
 				2138905B225C4324007A5A5E /* CourseRecommendationController.m in Sources */,
 				21B5C4B12238A25B00159498 /* MBProgressHUD+Add.m in Sources */,
 				21114E99223243710026F1CC /* RegisterViewController.m in Sources */,
+				21CFAA6E2261BEE7008F5E60 /* PublicRefreshHeader.m in Sources */,
 				21657ADA224E02AA00591E9C /* CurriculumLearningController.m in Sources */,
 				21A8FF97224C9C58009DCB62 /* NormalHeaderView.m in Sources */,
 				21657ADD224E032000591E9C /* CurriculumLearningCell.m in Sources */,
+				21CFAA6A2261BE6D008F5E60 /* PublicRefreshFooter.m in Sources */,
+				21CFAA712261BF22008F5E60 /* UIView+Animations.m in Sources */,
 				21A8FFAF224CE5FF009DCB62 /* SettingViewController.m in Sources */,
 				215F382E2233699000A2A1C2 /* CourseCenterCell.m in Sources */,
 				21657AE9224E186400591E9C /* InformationCell.m in Sources */,

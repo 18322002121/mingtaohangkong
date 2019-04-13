@@ -21,9 +21,7 @@ PODS:
   - JZNavigationExtension (2.1)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
-  - PLPlayerKit (3.4.1):
-    - PLPlayerKit/universal (= 3.4.1)
-  - PLPlayerKit/universal (3.4.1)
+  - MJRefresh (3.1.16)
   - SDWebImage (5.0.0):
     - SDWebImage/Core (= 5.0.0)
   - SDWebImage/Core (5.0.0)
@@ -36,7 +34,7 @@ DEPENDENCIES:
   - JZNavigationExtension
   - Masonry
   - MBProgressHUD
-  - PLPlayerKit (from `https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec`)
+  - MJRefresh
   - SDWebImage
   - YYModel
 
@@ -48,12 +46,9 @@ SPEC REPOS:
     - JZNavigationExtension
     - Masonry
     - MBProgressHUD
+    - MJRefresh
     - SDWebImage
     - YYModel
-
-EXTERNAL SOURCES:
-  PLPlayerKit:
-    :podspec: https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -62,10 +57,10 @@ SPEC CHECKSUMS:
   JZNavigationExtension: 45284fc63ba48a9e55b020656d39c86b01ff6a63
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  PLPlayerKit: 8dbda4525878842315e0ae6329dcefa7b5d8cc7e
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b09dba120521da63071b093fcb64db28d10bd8e5
+PODFILE CHECKSUM: 4602bf7952a254a84f9522a61a8d1ff5dae727c7
 
 COCOAPODS: 1.5.3

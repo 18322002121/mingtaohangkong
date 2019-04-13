@@ -14,7 +14,7 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <MBProgressHUD.h>
 #import <YYModel.h>
-#import <PLPlayerKit/PLPlayerKit.h>
+#import <MJRefresh.h>
 #import "HCYRequestHandler.h"
 #import "HCYRequestManager.h"
 #import "HCYRequestUrl.h"
@@ -24,6 +24,9 @@
 #import "PublicLabel.h"
 #import "PublicButton.h"
 #import "PublicTextfield.h"
+#import "PublicRefreshFooter.h"
+#import "PublicRefreshHeader.h"
+#import "UIView+Animations.h"
 
 
 // Include any system framework and library headers here that should be included in all compilation units.

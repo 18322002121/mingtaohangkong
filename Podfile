@@ -8,5 +8,5 @@ target "mingtaohangkong" do
     pod 'JZNavigationExtension'
     pod 'CocoaLumberjack'
     pod 'YYModel'
-
+    pod 'MJRefresh'
 end

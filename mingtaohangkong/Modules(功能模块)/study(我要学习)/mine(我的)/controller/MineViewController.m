@@ -24,6 +24,26 @@ static NSString *const mineCell =@"MineCell";
     [super viewDidLoad];
     [self moduleSelection];
     self.tableView.backgroundColor = [UIColor whiteColor];
+    
+    self.tableView.mj_header = [PublicRefreshHeader headerWithRefreshingBlock:^{
+//        [self.datas removeAllObjects];
+//        NSArray *datas = [self hn_modelArrayWithCategory:self.model.category fromModel:x];
+//        [self.datas addObjectsFromArray:datas];
+//        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+    }];
+    
+    self.tableView.mj_footer = [PublicRefreshFooter footerWithRefreshingBlock:^{
+//        if (datas.count == 0 || !datas) {
+//            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+//        }else {
+//            [self.datas addObjectsFromArray:datas];
+            [self.tableView.mj_footer endRefreshing];
+//        }
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
+    
 }
 
 - (void)moduleSelection{
