@@ -60,6 +60,7 @@
 		21A8FFAF224CE5FF009DCB62 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8FFAE224CE5FF009DCB62 /* SettingViewController.m */; };
 		21B5C4B12238A25B00159498 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B5C4B02238A25B00159498 /* MBProgressHUD+Add.m */; };
 		21C3771322364C7F00CFAB8F /* JobWantedTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3771222364C7F00CFAB8F /* JobWantedTabBarController.m */; };
+		21CFAA642261B1EB008F5E60 /* UIImage+cornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CFAA632261B1EB008F5E60 /* UIImage+cornerRadius.m */; };
 		21EE8122225DB72100998889 /* VideoPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8121225DB72100998889 /* VideoPlaybackController.m */; };
 		21EE8125225DBCF800998889 /* VideoPlaybackHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8124225DBCF800998889 /* VideoPlaybackHeaderView.m */; };
 		6E6526D7C4861D85322A4F46 /* libPods-mingtaohangkong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F528897F203DEA86ED0D0DAD /* libPods-mingtaohangkong.a */; };
@@ -193,6 +194,8 @@
 		21B5C4B02238A25B00159498 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		21C3771122364C7F00CFAB8F /* JobWantedTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobWantedTabBarController.h; sourceTree = "<group>"; };
 		21C3771222364C7F00CFAB8F /* JobWantedTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobWantedTabBarController.m; sourceTree = "<group>"; };
+		21CFAA622261B1EB008F5E60 /* UIImage+cornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+cornerRadius.h"; sourceTree = "<group>"; };
+		21CFAA632261B1EB008F5E60 /* UIImage+cornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+cornerRadius.m"; sourceTree = "<group>"; };
 		21EE8120225DB72100998889 /* VideoPlaybackController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackController.h; sourceTree = "<group>"; };
 		21EE8121225DB72100998889 /* VideoPlaybackController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlaybackController.m; sourceTree = "<group>"; };
 		21EE8123225DBCF800998889 /* VideoPlaybackHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackHeaderView.h; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 				21114E88223217170026F1CC /* UIColor+Hex.m */,
 				216DAF8D225F13F90008C8D2 /* PublicTableView.h */,
 				216DAF8E225F13F90008C8D2 /* PublicTableView.m */,
+				21CFAA622261B1EB008F5E60 /* UIImage+cornerRadius.h */,
+				21CFAA632261B1EB008F5E60 /* UIImage+cornerRadius.m */,
 			);
 			path = "Utils(工具类)";
 			sourceTree = "<group>";
@@ -865,6 +870,7 @@
 				215F382822335C7200A2A1C2 /* ClassificationSelectionCell.m in Sources */,
 				21114E9F22324A370026F1CC /* BaseNavigationController.m in Sources */,
 				2138906A225C6479007A5A5E /* CourseChaptersHeaderView.m in Sources */,
+				21CFAA642261B1EB008F5E60 /* UIImage+cornerRadius.m in Sources */,
 				21114EA8223274D80026F1CC /* CurriculumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

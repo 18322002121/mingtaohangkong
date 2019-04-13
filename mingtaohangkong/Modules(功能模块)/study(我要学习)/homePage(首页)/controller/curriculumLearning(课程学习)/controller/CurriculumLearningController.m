@@ -25,7 +25,7 @@ static NSString *const curriculumLearningCell = @"CurriculumLearningCell";
 
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, kTopHeight, KScreenWidth, KScreenHeight) style:UITableViewStyleGrouped];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, kNavAndStatusHight, KScreenWidth, KScreenHeight) style:UITableViewStyleGrouped];
         _tableView.backgroundColor=KWhiteColor;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.showsVerticalScrollIndicator = NO;
