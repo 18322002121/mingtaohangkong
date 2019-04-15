@@ -19,6 +19,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 //    self.jz_navigationBarBackgroundAlpha = 0;
+    [self checkworking];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -31,5 +32,25 @@
     [self.view addSubview:bar];
     return bar;
 }
+
+/** 检测网络状态 */
+- (void)checkworking{
+    AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
+    [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case 0:
+                [MBProgressHUD showMessag:@"请检查您的网络!" toView:self.view];
+                break;
+            case 1:
+                NSLog(@"蜂窝数据");
+            case 2:
+                NSLog(@"wifi网络");
+            default:
+                break;
+        }
+    }];
+    [manger startMonitoring];
+}
+
 
 @end

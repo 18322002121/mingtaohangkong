@@ -37,7 +37,6 @@ static NSString *const normalHeaderView = @"NormalHeaderView";
     [super viewDidLoad];
     [self loadingViews];
     [self moduleSelection];
-
 }
 
 #pragma mark - 请求数据
@@ -137,7 +136,7 @@ static NSString *const normalHeaderView = @"NormalHeaderView";
     }
 }
 
-//UICollectionView被选中时调用的方法
+/** UICollectionView被选中时调用的方法 */
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section ==0){
