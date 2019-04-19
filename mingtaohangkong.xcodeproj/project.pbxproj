@@ -65,6 +65,10 @@
 		21CFAA6E2261BEE7008F5E60 /* PublicRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CFAA6D2261BEE7008F5E60 /* PublicRefreshHeader.m */; };
 		21CFAA712261BF22008F5E60 /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CFAA702261BF22008F5E60 /* UIView+Animations.m */; };
 		21CFAA732261C125008F5E60 /* Refresh.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CFAA722261C125008F5E60 /* Refresh.xcassets */; };
+		21D0B174226566F00093F79F /* PublicSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0B173226566F00093F79F /* PublicSegmentedControl.m */; };
+		21D0B17E22657E3F0093F79F /* PublicVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0B17D22657E3F0093F79F /* PublicVideoPlayController.m */; };
+		21D720BE22647B18007F5B21 /* PublicReloadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D720BD22647B18007F5B21 /* PublicReloadingAnimation.m */; };
+		21D720C122647BF9007F5B21 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D720BF22647BF9007F5B21 /* UIView+Extension.m */; };
 		21EE8122225DB72100998889 /* VideoPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8121225DB72100998889 /* VideoPlaybackController.m */; };
 		21EE8125225DBCF800998889 /* VideoPlaybackHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE8124225DBCF800998889 /* VideoPlaybackHeaderView.m */; };
 		6E6526D7C4861D85322A4F46 /* libPods-mingtaohangkong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F528897F203DEA86ED0D0DAD /* libPods-mingtaohangkong.a */; };
@@ -207,6 +211,14 @@
 		21CFAA6F2261BF22008F5E60 /* UIView+Animations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
 		21CFAA702261BF22008F5E60 /* UIView+Animations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
 		21CFAA722261C125008F5E60 /* Refresh.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Refresh.xcassets; sourceTree = "<group>"; };
+		21D0B172226566F00093F79F /* PublicSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicSegmentedControl.h; sourceTree = "<group>"; };
+		21D0B173226566F00093F79F /* PublicSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicSegmentedControl.m; sourceTree = "<group>"; };
+		21D0B17C22657E3F0093F79F /* PublicVideoPlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicVideoPlayController.h; sourceTree = "<group>"; };
+		21D0B17D22657E3F0093F79F /* PublicVideoPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicVideoPlayController.m; sourceTree = "<group>"; };
+		21D720BC22647B18007F5B21 /* PublicReloadingAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicReloadingAnimation.h; sourceTree = "<group>"; };
+		21D720BD22647B18007F5B21 /* PublicReloadingAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicReloadingAnimation.m; sourceTree = "<group>"; };
+		21D720BF22647BF9007F5B21 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		21D720C022647BF9007F5B21 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		21EE8120225DB72100998889 /* VideoPlaybackController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackController.h; sourceTree = "<group>"; };
 		21EE8121225DB72100998889 /* VideoPlaybackController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlaybackController.m; sourceTree = "<group>"; };
 		21EE8123225DBCF800998889 /* VideoPlaybackHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackHeaderView.h; sourceTree = "<group>"; };
@@ -272,7 +284,6 @@
 				210B725C2231287C003F572E /* Utils(工具类) */,
 				210B725B22312867003F572E /* ThirdParty(第三方库) */,
 				210B725A2231285A003F572E /* Define(全局宏定义) */,
-				210B725922312848003F572E /* Network(网络请求) */,
 				2108B3452231241F0075559D /* Assets.xcassets */,
 				2108B3472231241F0075559D /* LaunchScreen.storyboard */,
 				2108B34A2231241F0075559D /* Info.plist */,
@@ -330,6 +341,10 @@
 		210B725C2231287C003F572E /* Utils(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				21D0B17522657CF60093F79F /* 视频播放 */,
+				21D0B171226566CD0093F79F /* 分页控制 */,
+				210B725922312848003F572E /* Network(网络请求) */,
+				21D720B822647AB6007F5B21 /* 网络加载动画 */,
 				21CFAA6B2261BE94008F5E60 /* 刷新控件 */,
 				21B5C4AF2238A25B00159498 /* MBProgressHUD+Add.h */,
 				21B5C4B02238A25B00159498 /* MBProgressHUD+Add.m */,
@@ -659,6 +674,35 @@
 			path = "刷新控件";
 			sourceTree = "<group>";
 		};
+		21D0B171226566CD0093F79F /* 分页控制 */ = {
+			isa = PBXGroup;
+			children = (
+				21D0B172226566F00093F79F /* PublicSegmentedControl.h */,
+				21D0B173226566F00093F79F /* PublicSegmentedControl.m */,
+			);
+			path = "分页控制";
+			sourceTree = "<group>";
+		};
+		21D0B17522657CF60093F79F /* 视频播放 */ = {
+			isa = PBXGroup;
+			children = (
+				21D0B17C22657E3F0093F79F /* PublicVideoPlayController.h */,
+				21D0B17D22657E3F0093F79F /* PublicVideoPlayController.m */,
+			);
+			path = "视频播放";
+			sourceTree = "<group>";
+		};
+		21D720B822647AB6007F5B21 /* 网络加载动画 */ = {
+			isa = PBXGroup;
+			children = (
+				21D720BC22647B18007F5B21 /* PublicReloadingAnimation.h */,
+				21D720BD22647B18007F5B21 /* PublicReloadingAnimation.m */,
+				21D720C022647BF9007F5B21 /* UIView+Extension.h */,
+				21D720BF22647BF9007F5B21 /* UIView+Extension.m */,
+			);
+			path = "网络加载动画";
+			sourceTree = "<group>";
+		};
 		C112C4D1400769431DAF84CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -873,11 +917,13 @@
 				21114EAB223274ED0026F1CC /* InformationViewController.m in Sources */,
 				2138905B225C4324007A5A5E /* CourseRecommendationController.m in Sources */,
 				21B5C4B12238A25B00159498 /* MBProgressHUD+Add.m in Sources */,
+				21D720BE22647B18007F5B21 /* PublicReloadingAnimation.m in Sources */,
 				21114E99223243710026F1CC /* RegisterViewController.m in Sources */,
 				21CFAA6E2261BEE7008F5E60 /* PublicRefreshHeader.m in Sources */,
 				21657ADA224E02AA00591E9C /* CurriculumLearningController.m in Sources */,
 				21A8FF97224C9C58009DCB62 /* NormalHeaderView.m in Sources */,
 				21657ADD224E032000591E9C /* CurriculumLearningCell.m in Sources */,
+				21D0B174226566F00093F79F /* PublicSegmentedControl.m in Sources */,
 				21CFAA6A2261BE6D008F5E60 /* PublicRefreshFooter.m in Sources */,
 				21CFAA712261BF22008F5E60 /* UIView+Animations.m in Sources */,
 				21A8FFAF224CE5FF009DCB62 /* SettingViewController.m in Sources */,
@@ -885,6 +931,7 @@
 				21657AE9224E186400591E9C /* InformationCell.m in Sources */,
 				216DAF8F225F13F90008C8D2 /* PublicTableView.m in Sources */,
 				21C3771322364C7F00CFAB8F /* JobWantedTabBarController.m in Sources */,
+				21D720C122647BF9007F5B21 /* UIView+Extension.m in Sources */,
 				21114EAE223275050026F1CC /* LiveBroadcastViewController.m in Sources */,
 				21114EB1223275120026F1CC /* MineViewController.m in Sources */,
 				21EE8122225DB72100998889 /* VideoPlaybackController.m in Sources */,
@@ -895,6 +942,7 @@
 				21114E9322321C480026F1CC /* LoginViewController.m in Sources */,
 				21A8FFA9224CA982009DCB62 /* MineCell.m in Sources */,
 				2108B33E2231241E0075559D /* AppDelegate.m in Sources */,
+				21D0B17E22657E3F0093F79F /* PublicVideoPlayController.m in Sources */,
 				21A8FF8F224C6442009DCB62 /* SubscribeCell.m in Sources */,
 				21657AE6224E0C1D00591E9C /* SigninViewController.m in Sources */,
 				215F382822335C7200A2A1C2 /* ClassificationSelectionCell.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "HCYRequestHandler.h"
+#import "PublicReloadingAnimation.h"
 
 @interface HCYRequestHandler ()
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
@@ -45,11 +46,12 @@ static HCYRequestHandler *requestManager = nil;
 }
 
 - (void)GET:(NSString *)URLString parameters:(id)parameters success:(HCYHttpRequestSuccess)success failure:(HCYHttpRequestFailed)failure{
-
+    [PublicReloadingAnimation showLoadingAnimation];
     [self.sessionManager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
+            [PublicReloadingAnimation removeLoadingAnimation];
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -60,10 +62,12 @@ static HCYRequestHandler *requestManager = nil;
 }
 
 - (void)POST:(NSString *)URLString parameters:(id)parameters success:(HCYHttpRequestSuccess)success failure:(HCYHttpRequestFailed)failure{
+    [PublicReloadingAnimation showLoadingAnimation];
     [self.sessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
+            [PublicReloadingAnimation removeLoadingAnimation];
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

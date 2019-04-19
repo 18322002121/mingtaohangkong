@@ -20,6 +20,10 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
 //    self.jz_navigationBarBackgroundAlpha = 0;
     [self checkworking];
+    /*! 设置CGRectZero从导航栏下开始计算 */
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

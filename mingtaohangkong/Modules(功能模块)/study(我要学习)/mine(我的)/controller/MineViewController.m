@@ -15,6 +15,7 @@
 @interface MineViewController ()
 @property(nonatomic,strong)PublicTableView *tableView;
 @property(nonatomic,strong)NSMutableArray *moduleSelectionArray;
+@property(nonatomic,strong)NSArray *tempArray;
 @end
 
 static NSString *const mineCell =@"MineCell";
@@ -53,6 +54,7 @@ static NSString *const mineCell =@"MineCell";
                            @{@"iconImage":@"checkin",@"gridTitle":@"检测更新"},
                            @{@"iconImage":@"checkin",@"gridTitle":@"切换身份"}
                            ];
+    _tempArray = dataArray;
     self.moduleSelectionArray = [NSMutableArray arrayWithCapacity:0];
     [dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.moduleSelectionArray  addObject:[ModuleSelectionModel initWithDict:obj]];
@@ -75,7 +77,7 @@ static NSString *const mineCell =@"MineCell";
     };
     
     tableviews.numberOfRowsInSectionBlock = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
-        return 5;
+        return self.tempArray.count;
     };
     
     tableviews.cellForRowAtIndexPathBlock = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
@@ -85,6 +87,8 @@ static NSString *const mineCell =@"MineCell";
         normalCell = cell;
         return normalCell;
     };
+    
+    tableviews.rowHeight = 50;
     
     tableviews.heightForHeaderInSectionBlock = ^CGFloat(UITableView * _Nonnull tableView, NSInteger section) {
         return 243;

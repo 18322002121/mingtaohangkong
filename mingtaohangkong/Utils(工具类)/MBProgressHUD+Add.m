@@ -60,6 +60,7 @@
     hud.removeFromSuperViewOnHide = YES;
     // YES代表需要蒙版效果
     hud.backgroundView.color = [UIColor clearColor];
+    [hud hideAnimated:YES afterDelay:3];
     return hud;
 }
 

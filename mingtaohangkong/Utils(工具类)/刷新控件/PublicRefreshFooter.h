@@ -6,7 +6,8 @@
 //  Copyright © 2019年 hcy. All rights reserved.
 //
 
-#import "MJRefreshAutoFooter.h"
+//#import "MJRefreshAutoFooter.h"
+#import <MJRefresh/MJRefresh.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

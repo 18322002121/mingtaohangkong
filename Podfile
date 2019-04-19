@@ -9,4 +9,5 @@ target "mingtaohangkong" do
     pod 'CocoaLumberjack'
     pod 'YYModel'
     pod 'MJRefresh'
+    pod 'ZFPlayer'
 end
