@@ -18,11 +18,15 @@
         self.dataSource = self;
         self.estimatedRowHeight = 200;
         self.rowHeight = UITableViewAutomaticDimension;
-//        self.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.showsVerticalScrollIndicator = NO;
     }
     return self;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return self.heightForRowAtIndexPath ? self.heightForRowAtIndexPath(tableView,indexPath) : 44;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.numberOfSectionsInTableViewBlock ? self.numberOfSectionsInTableViewBlock(tableView) : 1;
 }

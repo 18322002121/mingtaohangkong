@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 返回多少个Row */
 @property (nonatomic,strong) NSInteger (^numberOfRowsInSectionBlock)(UITableView *tableView,NSInteger section);
 
+/** 返回Row的高度 */
+@property (nonatomic,strong) CGFloat(^heightForRowAtIndexPath)(UITableView *tableView,NSIndexPath *indexPath);
+
 /** 返回多少个Cell */
 @property (nonatomic,strong) UITableViewCell * (^cellForRowAtIndexPathBlock)(UITableView *tableView,NSIndexPath *indexPath);
 
