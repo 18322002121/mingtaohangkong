@@ -57,7 +57,7 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
                                        @"age":@(22),
                                        },
                                    @{
-                                       @"name":@"博爱05",
+                                       @"name":@"05.  航空服务学习礼仪的重要性",
                                        @"age":@(25),
                                        }
                                    ]
@@ -124,7 +124,7 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
 
 - (PublicTableView *)tableView{
     if (!_tableView) {
-        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight)style:(UITableViewStyleGrouped)];
+        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight  - kTabBarHeight)style:(UITableViewStyleGrouped)];
         [_tableView registerClass:[CourseChaptersCell class] forCellReuseIdentifier:courseChaptersCell];
         [self reloadTableviewDatasource:_tableView];
         [self.view addSubview:_tableView];
@@ -155,11 +155,11 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
     tableviews.rowHeight = 45;
     
     tableviews.heightForHeaderInSectionBlock = ^CGFloat(UITableView * _Nonnull tableView, NSInteger section) {
-        return 30;
+        return 45;
     };
     
     tableviews.viewForHeaderInSectionBlock = ^UIView * _Nonnull(UITableView * _Nonnull tableView, NSInteger section) {
-        CourseChaptersHeaderView *headerView = [[CourseChaptersHeaderView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 30)];
+        CourseChaptersHeaderView *headerView = [[CourseChaptersHeaderView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 45)];
         headerView.OpenAndCloseButton = ^(UIButton * _Nonnull sender) {
             NSLog(@"%ld section头部被点击了",(long)section);
         };

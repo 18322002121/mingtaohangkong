@@ -12,8 +12,9 @@
 #import "CourseRecommendationCell.h"
 #import "VideoPlaybackDetailHeaderView.h"
 
-@interface VideoPlaybackController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong)UITableView *tableView;
+
+@interface VideoPlaybackController ()
+@property(nonatomic,strong)PublicTableView *tableView;
 @end
 
 static NSString *const courseChaptersCell = @"CourseChaptersCell";
@@ -29,84 +30,88 @@ static NSString *const videoPlaybackDetailHeaderView = @"VideoPlaybackDetailHead
     self.title = @"视频播放";
 }
 
-- (UITableView *)tableView{
+- (PublicTableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        self.tableView.showsHorizontalScrollIndicator = NO;
-        self.tableView.showsVerticalScrollIndicator = NO;
+        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight)style:(UITableViewStyleGrouped)];
         [self.tableView registerClass:[CourseChaptersCell class] forCellReuseIdentifier:courseChaptersCell];
         [self.tableView registerClass:[CourseRecommendationCell class] forCellReuseIdentifier:courseRecommendationCell];
         [self.tableView registerClass:[VideoPlaybackHeaderView class] forHeaderFooterViewReuseIdentifier:videoPlaybackHeaderView];
         [self.tableView registerClass:[VideoPlaybackDetailHeaderView class] forHeaderFooterViewReuseIdentifier:videoPlaybackDetailHeaderView];
-        [self.view addSubview:self.tableView];
+        [self reloadTableviewDatasource:_tableView];
+        [self.view addSubview:_tableView];
     }
     return _tableView;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 3;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *normalCell = nil;
-    if (indexPath.section == 0) {
-        CourseChaptersCell *cell =[tableView dequeueReusableCellWithIdentifier:courseChaptersCell forIndexPath:indexPath];
-        normalCell = cell;
-    }else{
-        CourseRecommendationCell *cell =[tableView dequeueReusableCellWithIdentifier:courseRecommendationCell forIndexPath:indexPath];
-        normalCell = cell;
-    }
+- (void)reloadTableviewDatasource:(PublicTableView *)tableviews{
+    tableviews.numberOfSectionsInTableViewBlock = ^NSInteger(UITableView * _Nonnull tableView) {
+        return 2;
+    };
     
+    tableviews.numberOfRowsInSectionBlock = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
+        return 3;
+    };
     
-//    CourseChaptersModel *sectionModel = _dataArray[indexPath.section];
-//    Students *rowModel = sectionModel.students[indexPath.row];
-//    [cell setStudentsModel:rowModel];
-    return normalCell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0) {
-        return 45;
-    }else{
-        return 132;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return 275;
-    }else{
-        return 40;
-    }
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        VideoPlaybackHeaderView *videoPlayView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:videoPlaybackHeaderView];
-        return videoPlayView;
-    }else{
-        VideoPlaybackDetailHeaderView *videoPlayView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:videoPlaybackDetailHeaderView];
-        return videoPlayView;
-    }
+    tableviews.cellForRowAtIndexPathBlock = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        UITableViewCell *normalCell = nil;
+        if (indexPath.section == 0) {
+            CourseChaptersCell *cell =[tableView dequeueReusableCellWithIdentifier:courseChaptersCell forIndexPath:indexPath];
+            normalCell = cell;
+        }else{
+            CourseRecommendationCell *cell =[tableView dequeueReusableCellWithIdentifier:courseRecommendationCell forIndexPath:indexPath];
+            normalCell = cell;
+        }
+        return normalCell;
+    };
     
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    tableviews.rowHeight = 50;
     
+    tableviews.heightForHeaderInSectionBlock = ^CGFloat(UITableView * _Nonnull tableView, NSInteger section) {
+        if (section == 0) {
+            return 275;
+        }else{
+            return 40;
+        }
+    };
+    
+    tableviews.viewForHeaderInSectionBlock = ^UIView * _Nonnull(UITableView * _Nonnull tableView, NSInteger section) {
+        if (section == 0) {
+            VideoPlaybackHeaderView *videoPlayView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:videoPlaybackHeaderView];
+            return videoPlayView;
+        }else{
+            VideoPlaybackDetailHeaderView *videoPlayView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:videoPlaybackDetailHeaderView];
+            return videoPlayView;
+        }
+    };
+    
+    tableviews.heightForFooterInSectionBlock = ^CGFloat(UITableView * _Nonnull tableView, NSInteger section) {
+        return 0.01;
+    };
+    
+    tableviews.viewForFooterInSectionBlock = ^UIView * _Nonnull(UITableView * _Nonnull tableView, NSInteger section) {
+        UIView *subView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 0.01)];
+        subView.backgroundColor=[UIColor colorWithRed:0.89 green:0.89 blue:0.91 alpha:1.00];
+        return subView;
+    };
+    
+    tableviews.didSelectRowAtIndexPathBlock = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    };
+    
+    tableviews.heightForRowAtIndexPath = ^CGFloat(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        if (indexPath.section == 0) {
+            return 45;
+        }else{
+            return 132;
+        }
+    };
 }
+
+
+
+
+
+
+
 
 @end

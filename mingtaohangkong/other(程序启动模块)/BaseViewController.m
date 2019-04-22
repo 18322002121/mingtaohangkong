@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     /** 检测网络状态 */
     [self checkworking];
     /*! 设置CGRectZero从导航栏下开始计算 */
@@ -26,6 +25,7 @@
     }
     /** 请求网络并行异步加载 */
     [self parallelAsynchronous];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
