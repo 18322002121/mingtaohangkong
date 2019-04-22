@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"测试";
+    self.title = @"课程";
     [self buildSegment];
     [self reloadShowView];
 }

@@ -42,7 +42,7 @@
     [self.view addSubview:_phoneIcon];
     [_phoneIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left).offset(52);
-        make.top.mas_equalTo(self.view.mas_top).offset(106);
+        make.top.mas_equalTo(self.view.mas_top).offset(42);
         make.size.mas_equalTo(CGSizeMake(12, 15));
     }];
     

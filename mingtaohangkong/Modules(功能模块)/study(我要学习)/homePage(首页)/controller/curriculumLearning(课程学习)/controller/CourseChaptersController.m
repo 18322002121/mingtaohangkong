@@ -12,8 +12,8 @@
 #import "CourseChaptersHeaderView.h"
 #import "CourseChaptersModel.h"
 
-@interface CourseChaptersController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong)UITableView *tableView;
+@interface CourseChaptersController ()
+@property (nonatomic,strong)PublicTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataArray;
 @end
 
@@ -26,8 +26,6 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
     }
     return _dataArray;
 }
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -124,70 +122,66 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
     }];
 }
 
-- (UITableView *)tableView{
+- (PublicTableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        self.tableView.showsHorizontalScrollIndicator = NO;
-        self.tableView.showsVerticalScrollIndicator = NO;
-        [self.tableView registerClass:[CourseChaptersCell class] forCellReuseIdentifier:courseChaptersCell];
-        
-        [self.view addSubview:self.tableView];
+        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight)style:(UITableViewStyleGrouped)];
+        [_tableView registerClass:[CourseChaptersCell class] forCellReuseIdentifier:courseChaptersCell];
+        [self reloadTableviewDatasource:_tableView];
+        [self.view addSubview:_tableView];
     }
     return _tableView;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return self.dataArray.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    CourseChaptersModel *model = _dataArray[section];
-    return model.students.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *normalCell = nil;
-    CourseChaptersCell *cell =[tableView dequeueReusableCellWithIdentifier:courseChaptersCell forIndexPath:indexPath];
-    CourseChaptersModel *sectionModel = _dataArray[indexPath.section];
-    Students *rowModel = sectionModel.students[indexPath.row];
-    [cell setStudentsModel:rowModel];
-    normalCell = cell;
-    return normalCell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 45;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 30;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    CourseChaptersHeaderView *headerView = [[CourseChaptersHeaderView alloc]init];
-    headerView.OpenAndCloseButton = ^(UIButton * _Nonnull sender) {
-        NSLog(@"%ld section头部被点击了",(long)section);
+- (void)reloadTableviewDatasource:(PublicTableView *)tableviews{
+    tableviews.numberOfSectionsInTableViewBlock = ^NSInteger(UITableView * _Nonnull tableView) {
+        return self.dataArray.count;
     };
-    return headerView;
+    
+    tableviews.numberOfRowsInSectionBlock = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
+        CourseChaptersModel *model = self.dataArray[section];
+        return model.students.count;
+    };
+    
+    tableviews.cellForRowAtIndexPathBlock = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        UITableViewCell *normalCell = nil;
+        CourseChaptersCell *cell =[tableView dequeueReusableCellWithIdentifier:courseChaptersCell forIndexPath:indexPath];
+        CourseChaptersModel *sectionModel = self.dataArray[indexPath.section];
+        Students *rowModel = sectionModel.students[indexPath.row];
+        [cell setStudentsModel:rowModel];
+        normalCell = cell;
+        return normalCell;
+    };
+    
+    tableviews.rowHeight = 45;
+    
+    tableviews.heightForHeaderInSectionBlock = ^CGFloat(UITableView * _Nonnull tableView, NSInteger section) {
+        return 30;
+    };
+    
+    tableviews.viewForHeaderInSectionBlock = ^UIView * _Nonnull(UITableView * _Nonnull tableView, NSInteger section) {
+        CourseChaptersHeaderView *headerView = [[CourseChaptersHeaderView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 30)];
+        headerView.OpenAndCloseButton = ^(UIButton * _Nonnull sender) {
+            NSLog(@"%ld section头部被点击了",(long)section);
+        };
+        return headerView;
+    };
+    
+    tableviews.heightForFooterInSectionBlock = ^CGFloat(UITableView * _Nonnull tableView, NSInteger section) {
+        return 0.01;
+    };
+    
+    tableviews.viewForFooterInSectionBlock = ^UIView * _Nonnull(UITableView * _Nonnull tableView, NSInteger section) {
+        UIView *subView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 0.01)];
+        subView.backgroundColor=[UIColor colorWithRed:0.89 green:0.89 blue:0.91 alpha:1.00];
+        return subView;
+    };
+    
+    tableviews.didSelectRowAtIndexPathBlock = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        VideoPlaybackController *videoPlayback = [[VideoPlaybackController alloc]init];
+        [self.navigationController pushViewController:videoPlayback animated:YES];
+    };
+    
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    VideoPlaybackController *videoPlayback = [[VideoPlaybackController alloc]init];
-    [self.navigationController pushViewController:videoPlayback animated:YES];
-}
-
-
-
-
 
 
 
