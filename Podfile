@@ -9,4 +9,5 @@ target "mingtaohangkong" do
     pod 'YYModel'
     pod 'MJRefresh'
     pod 'ZFPlayer'
+    pod 'SuperPlayer'
 end
