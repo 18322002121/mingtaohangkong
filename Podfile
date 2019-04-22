@@ -5,7 +5,6 @@ target "mingtaohangkong" do
     pod 'SDWebImage'
     pod 'MBProgressHUD'
     pod 'FDFullscreenPopGesture', '1.1'
-    pod 'JZNavigationExtension'
     pod 'CocoaLumberjack'
     pod 'YYModel'
     pod 'MJRefresh'

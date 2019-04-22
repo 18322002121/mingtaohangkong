@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewController : UIViewController
 - (BaseNavigationBar *)showCustomNavBar;
+
+/** 异步并发请求 */
+- (void)networkRequest;
+
 @end
 
 NS_ASSUME_NONNULL_END

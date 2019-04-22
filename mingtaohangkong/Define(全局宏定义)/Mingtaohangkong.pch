@@ -10,7 +10,6 @@
 #define Mingtaohangkong_pch
 #import <AFNetworking.h>
 #import <Masonry.h>
-#import <JZNavigationExtension.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <MBProgressHUD.h>
 #import "MBProgressHUD+Add.h"

@@ -18,12 +18,14 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-//    self.jz_navigationBarBackgroundAlpha = 0;
+    /** 检测网络状态 */
     [self checkworking];
     /*! 设置CGRectZero从导航栏下开始计算 */
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
+    /** 请求网络并行异步加载 */
+    [self parallelAsynchronous];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -37,7 +39,8 @@
     return bar;
 }
 
-/** 检测网络状态 */
+#pragma mark - 检测网络状态
+
 - (void)checkworking{
     AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
     [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
@@ -56,5 +59,20 @@
     [manger startMonitoring];
 }
 
+#pragma mark - 请求网络并行异步加载
+
+- (void)parallelAsynchronous{
+    
+    dispatch_queue_t queue= dispatch_queue_create("hcy", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+        [self networkRequest];
+    });
+    
+}
+
+- (void)networkRequest{
+    
+}
 
 @end
