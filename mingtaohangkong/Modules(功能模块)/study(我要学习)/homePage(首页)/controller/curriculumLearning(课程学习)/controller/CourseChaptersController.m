@@ -124,7 +124,7 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
 
 - (PublicTableView *)tableView{
     if (!_tableView) {
-        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight  - kTabBarHeight)style:(UITableViewStyleGrouped)];
+        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight)style:(UITableViewStyleGrouped)];
         [_tableView registerClass:[CourseChaptersCell class] forCellReuseIdentifier:courseChaptersCell];
         [self reloadTableviewDatasource:_tableView];
         [self.view addSubview:_tableView];

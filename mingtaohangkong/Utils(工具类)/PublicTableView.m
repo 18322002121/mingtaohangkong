@@ -99,14 +99,14 @@
 //        }];
     
     /*! 第二种：卡片式动画 */
-    static CGFloat initialDelay = 0.2f;
-    static CGFloat stutter = 0.06f;
-
-    cell.contentView.transform =  CGAffineTransformMakeTranslation(KScreenWidth, 0);
-
-    [UIView animateWithDuration:1.0f delay:initialDelay + ((indexPath.row) * stutter) usingSpringWithDamping:0.6 initialSpringVelocity:0 options:0 animations:^{
-        cell.contentView.transform = CGAffineTransformIdentity;
-    } completion:NULL];
+//    static CGFloat initialDelay = 0.2f;
+//    static CGFloat stutter = 0.06f;
+//
+//    cell.contentView.transform =  CGAffineTransformMakeTranslation(KScreenWidth, 0);
+//
+//    [UIView animateWithDuration:1.0f delay:initialDelay + ((indexPath.row) * stutter) usingSpringWithDamping:0.6 initialSpringVelocity:0 options:0 animations:^{
+//        cell.contentView.transform = CGAffineTransformIdentity;
+//    } completion:NULL];
     
     /*! 第三种：从下往上 */
     
