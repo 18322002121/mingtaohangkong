@@ -24,9 +24,11 @@
 #define kNavBarHeight self.navigationController.navigationBar.frame.size.height
 #define HN_NAVIGATION_BAR_HEIGHT ([UIScreen mainScreen].bounds.size.height == 812 ? 88 :64)
 #define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define App_Frame_Height        [[UIScreen mainScreen] applicationFrame].size.height
+#define App_Frame_Width         [[UIScreen mainScreen] applicationFrame].size.width
 
 /** 导航栏和状态栏总高度 */
-#define kNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavAndStatusHight  (self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height)
 
 /** 强弱引用 */
 #define kWeakSelf(type)  __weak typeof(type) weak##type = type;

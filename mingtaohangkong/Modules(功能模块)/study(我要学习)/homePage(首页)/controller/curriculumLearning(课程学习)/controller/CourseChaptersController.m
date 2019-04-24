@@ -30,8 +30,13 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"章节";
-    self.tableView.backgroundColor = [UIColor whiteColor];
     [self createDatas];
+    NSLog(@"%f",App_Frame_Height);
+    NSLog(@"%f",KScreenHeight);
+    NSLog(@"%f",kNavAndStatusHight);
+    NSLog(@"%f",kStatusBarHeight);
+    NSLog(@"%f",self.navigationController.navigationBar.frame.size.height);
+    NSLog(@"%f",self.tableView.frame.size.height);
 }
 
 - (void)createDatas{
@@ -113,7 +118,51 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
                                        @"age":@(26),
                                        }
                                    ]
-                           }
+                           },
+                       @{
+                           @"className": @"1602班",
+                           @"students" :
+                               @[
+                                   @{
+                                       @"name":@"博爱11",
+                                       @"age":@(22),
+                                       },
+                                   @{
+                                       @"name":@"博爱12",
+                                       @"age":@(19),
+                                       },
+                                   @{
+                                       @"name":@"博爱13",
+                                       @"age":@(15),
+                                       },
+                                   @{
+                                       @"name":@"博爱14",
+                                       @"age":@(22),
+                                       }
+                                   ]
+                           },
+                       @{
+                           @"className": @"1602班",
+                           @"students" :
+                               @[
+                                   @{
+                                       @"name":@"博爱11",
+                                       @"age":@(22),
+                                       },
+                                   @{
+                                       @"name":@"博爱12",
+                                       @"age":@(19),
+                                       },
+                                   @{
+                                       @"name":@"博爱13",
+                                       @"age":@(15),
+                                       },
+                                   @{
+                                       @"name":@"博爱14",
+                                       @"age":@(22),
+                                       }
+                                   ]
+                           },
                        ];
 
     [datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -124,7 +173,7 @@ static NSString *const courseChaptersCell = @"CourseChaptersCell";
 
 - (PublicTableView *)tableView{
     if (!_tableView) {
-        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight)style:(UITableViewStyleGrouped)];
+        _tableView = [[PublicTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-kNavAndStatusHight)style:(UITableViewStyleGrouped)];
         [_tableView registerClass:[CourseChaptersCell class] forCellReuseIdentifier:courseChaptersCell];
         [self reloadTableviewDatasource:_tableView];
         [self.view addSubview:_tableView];

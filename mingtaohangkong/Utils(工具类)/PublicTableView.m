@@ -17,10 +17,12 @@
         self.delegate = self;
         self.dataSource = self;
         self.estimatedRowHeight = 200;
+        self.estimatedSectionHeaderHeight = 0;
+        self.estimatedSectionFooterHeight = 0;
         self.rowHeight = UITableViewAutomaticDimension;
         self.showsVerticalScrollIndicator = NO;
         if (@available(iOS 11.0, *)) {
-            self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+            [self setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
         } else {
         }
     }
